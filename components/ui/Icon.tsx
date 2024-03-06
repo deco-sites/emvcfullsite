@@ -2,58 +2,24 @@ import { asset } from "$fresh/runtime.ts";
 import type { JSX } from "preact";
 
 export type AvailableIcons =
-  | "ArrowsPointingOut"
-  | "Bars3"
+  | "Logo"
+  | "Vector"
   | "ChevronLeft"
   | "ChevronRight"
-  | "ChevronUp"
-  | "ChevronDown"
-  | "CreditCard"
-  | "Deco"
-  | "Diners"
-  | "Discord"
-  | "Discount"
-  | "Elo"
-  | "Facebook"
-  | "FilterList"
-  | "Heart"
-  | "Instagram"
-  | "Linkedin"
-  | "Minus"
-  | "MapPin"
-  | "MagnifyingGlass"
-  | "Mastercard"
-  | "Message"
-  | "Phone"
-  | "Pix"
-  | "Plus"
-  | "QuestionMarkCircle"
-  | "Return"
-  | "Ruler"
-  | "ShoppingCart"
-  | "Star"
-  | "Tiktok"
-  | "Trash"
-  | "Truck"
+  | "Testimonial"
+  | "Behance"
+  | "Drible"
   | "Twitter"
-  | "User"
-  | "Visa"
-  | "WhatsApp"
+  | "InputUser"
+  | "InputEmail"
+  | "LogoWithoutText"
+  | "BehanceFooter"
+  | "TwitterFooter"
+  | "DribbleFooter"
   | "XMark"
-  | "Zoom"
-  | "Alert"
-  | "AlertInfo"
-  | "AlertSuccess"
-  | "AlertWarning"
-  | "AlertError"
-  | "share";
+  | "Bars3";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
-  /**
-   * Symbol id from element to render. Take a look at `/static/icons.svg`.
-   *
-   * Example: <Icon id="Bell" />
-   */
   id: AvailableIcons;
   size?: number;
 }

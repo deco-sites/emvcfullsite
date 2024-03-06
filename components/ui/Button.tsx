@@ -5,7 +5,6 @@ export type Props =
   & Omit<JSX.IntrinsicElements["button"], "loading">
   & {
     loading?: boolean;
-    ariaLabel?: string;
   };
 
 const Button = forwardRef<HTMLButtonElement, Props>(({
@@ -13,20 +12,15 @@ const Button = forwardRef<HTMLButtonElement, Props>(({
   class: _class = "",
   loading,
   disabled,
-  ariaLabel,
-  children,
   ...props
 }, ref) => (
   <button
     {...props}
-    className={`btn no-animation ${_class}`}
+    className={`btn ${_class} ${loading ? "loading" : ""}`}
     disabled={disabled || loading}
-    aria-label={ariaLabel || props["aria-label"]}
     type={type}
     ref={ref}
-  >
-    {loading ? <span class="loading loading-spinner" /> : children}
-  </button>
+  />
 ));
 
 export default Button;
