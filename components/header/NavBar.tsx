@@ -18,7 +18,7 @@ export default function NavBar({ navItems }: NavBarProps) {
         <HeaderButton variant="menu" />
       </div>
 
-      <ul class="justify-right flex-auto gap-4 hidden md:flex">
+      <ul class="justify-end flex-auto gap-4 hidden md:flex">
         {navItems.map((navItem) => (
           <NavItem key={navItem.label} item={navItem} />
         ))}
